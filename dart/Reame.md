@@ -235,6 +235,41 @@ Inheritance allows a child class to inherit the properties and methods from anot
 
 Use the super keyword to reference the parent class.
 
+## Abstract Class:
+
+Unlike a concrete class, you cannot create new objects from an abstract class. The main purpose of the abstract class is to allow other classes to inherit from it.
+
+**It serves as a base class for other classes to inherit from. An abstract class provides a common base with both implemented methods and methods that must be overridden by child classes.**
+
+- An abstract class is a class that cannot be instantiated. It’s declared with an abstract keyword.
+- An abstract method only has the signature and doesn’t have the implementation.
+
+- Subclasses of an abstract class must provide an implementation for abstract methods and properties.
+
+## Interface:
+
+It defines a contract that other classes must follow. An interface contains only method signatures (no implementation) and requires the implementing class to define all the methods.
+
+## Generics
+
+Use generics to define classes and methods that work with more than one type.
+Use extends to constraint the type of the generics.
+
+```
+class Pair<T> {
+  T x;
+  T y;
+  Pair(this.x, this.y);
+}
+
+var pairStr = Pair<String>('A', 'B');
+print('x=${pairStr.x},y=${pairStr.y}');
+
+var pairInt = Pair<int>(10, 20);
+print('x=${pairInt.x},y=${pairInt.y}');
+
+```
+
 ## Collections
 
 - Introduction to the Dart private fields
