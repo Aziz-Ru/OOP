@@ -33,4 +33,27 @@
 
 ### Factory Method
 
-Define an interface for creating an object but we let subclass decide which class to instantiate.
+Define an interface for creating an object, but let subclasses decide which class toinstantiate. Factory Method lets a class defer instantiation to subclasses.
+Use the Factory Method pattern when
+• a class can't anticipate the class of objects it must create.
+• a class wants its subclasses to specify the objects it creates.
+• classes delegate responsibility to one of several helper subclasses, and you
+want to localize the knowledge of which helper subclass is the delegate.
+
+
+## Participants
+
+Product (Document)
+- defines the interface of objects the factory method creates.
+
+ConcreteProduct (MyDocument)
+- implements the Product interface.
+
+
+Creator (Application)
+- declares the factory method, which returns an object of type Product. Cre-
+ator may also define a default implementation of the factory method that
+returns a default ConcreteProduct object.
+
+ConcreteCreator (MyApplication)
+- overrides the factory method to return an instance of a ConcreteProduct
